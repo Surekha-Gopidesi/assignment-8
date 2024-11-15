@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+    <style>
+        div{
+            border: 2px solid rgb(71, 14, 14);
+            width: 30%;
+            height: 70% auto;
+            padding: 10px;
+            background-image: url('pro3.jpg');
+            border-radius: 20px;
+        
+        }
+        h1{
+            color:blanchedalmond
+        }
+        b{
+            color:palevioletred
+        }
+        
+        </style>
+</head>
+<body>
+    <div>
+	<h1>Login Form</h1>
+	<form id="login-form">
+		<label for="username"><b>Username:</b></label>
+		<input type="text" id="username" name="username"><br><br>
+		<label for="password"><b>Password:</b></label>
+		<input type="password" id="password" name="password" width="100%"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<script>
+		const form = document.getElementById('login-form');
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			const username = document.getElementById('username').value;
+			const password = document.getElementById('password').value;
+
+			// Store the data in local storage
+			localStorage.setItem('username', username);
+			localStorage.setItem('password', password);
+
+			// Redirect to showparams.html
+			window.location.href = 'show.html';
+		});
+	</script>
+    </div>
+</body>
+</html>
+
+

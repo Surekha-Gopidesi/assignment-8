@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Parameters</title>
+</head>
+<body>
+	<h1>Show Parameters</h1>
+	<form id="show-params-form">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" readonly><br><br>
+		<label for="password">Password:</label>
+		<input type="text" id="password" name="password" readonly><br><br>
+	</form>
+
+	<script>
+		// Retrieve the data from local storage
+		const username = localStorage.getItem('username');
+		const password = localStorage.getItem('password');
+
+		// Display the data in the form
+		document.getElementById('username').value = username;
+		document.getElementById('password').value = password;
+	</script>
+</body>
+</html>
